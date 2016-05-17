@@ -1,7 +1,8 @@
 # CompositePU
 
-This is a Proof of concept to connect to multiple databases using JPA/eclipselink. 
-We are using composite persistence unit to configure multiple persistence units, which will be used to connect to multiple databases. 
+This is a Proof of concept to connect to multiple databases using CompositePU feature of JPA/eclipselink.
+
+![alt tag](https://raw.githubusercontent.com/gammay/CompositePU/master/diagram.png)
 
 ## How to run
 Once you have checked out the project, do the following to run it.

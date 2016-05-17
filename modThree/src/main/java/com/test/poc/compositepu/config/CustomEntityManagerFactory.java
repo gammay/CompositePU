@@ -70,6 +70,7 @@ public class CustomEntityManagerFactory {
 		memberProps.put(PU_TWO, props2);
 		Map props = new HashMap();
 		props.put(ECLIPSELINK_COMPOSITE_UNIT_PROPERTIES, memberProps);
+		props.put("eclipselink.logging.level", "FINEST");
 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory(COMPOSITE_PU, props);
 

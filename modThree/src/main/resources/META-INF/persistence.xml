@@ -10,6 +10,8 @@
 		<jar-file>../lib/modTwo-1.0.0.jar</jar-file>		
 		<properties>
 			<property name="eclipselink.composite-unit" value="true" />			
+			<property name="eclipselink.logging.level" value="FINE" />
+			<property name="eclipselink.logging.parameters" value="true" />
 		</properties>
 	</persistence-unit>
 </persistence>

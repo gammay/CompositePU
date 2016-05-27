@@ -17,6 +17,7 @@ public class TableOneDaoImpl implements TableOneDao {
 	@PersistenceContext
 	private EntityManager em;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<TableOne> getTableOneList(Integer start, Integer range) {
 		LOG.info("-> getTableOneList start={}, range={}", start, range);

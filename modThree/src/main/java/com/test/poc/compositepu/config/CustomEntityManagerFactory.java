@@ -22,35 +22,39 @@ public class CustomEntityManagerFactory {
 	public static final Logger LOG = LoggerFactory.getLogger(CustomEntityManagerFactory.class);
 
 	@Value("${database.driver}")
-	private String JDBC_DRIVER;
+	public String JDBC_DRIVER;
 	@Value("${database.username}")
-	private String DB_USERNAME;
+	public String DB_USERNAME;
 	@Value("${database.password}")
-	private String DB_PASSWORD;
+	public String DB_PASSWORD;
 	@Value("${database.host}")
-	private String DB_HOST;
+	public String DB_HOST;
 	@Value("${database.params}")
-	private String DB_PARAMS;
+	public String DB_PARAMS;
 
-	private static final String DB_ONE = "dbone";
-	private static final String DB_TWO = "dbtwo";
+	public static final String DB_ONE = "dbone";
+	public static final String DB_TWO = "dbtwo";
 
-	private static final String PU_ONE = "PUONE";
-	private static final String PU_TWO = "PUTWO";
-	private static final String COMPOSITE_PU = "CompositePU";
+	public static final String PU_ONE = "PUONE";
+	public static final String PU_TWO = "PUTWO";
+	public static final String COMPOSITE_PU = "CompositePU";
 
-	private static final String JAVAX_PERSISTENCE_JDBC_USER = "javax.persistence.jdbc.user";
-	private static final String JAVAX_PERSISTENCE_JDBC_PASSWORD = "javax.persistence.jdbc.password";
-	private static final String JAVAX_PERSISTENCE_JDBC_DRIVER = "javax.persistence.jdbc.driver";
-	private static final String JAVAX_PERSISTENCE_JDBC_URL = "javax.persistence.jdbc.url";
+	public static final String JAVAX_PERSISTENCE_JDBC_USER = "javax.persistence.jdbc.user";
+	public static final String JAVAX_PERSISTENCE_JDBC_PASSWORD = "javax.persistence.jdbc.password";
+	public static final String JAVAX_PERSISTENCE_JDBC_DRIVER = "javax.persistence.jdbc.driver";
+	public static final String JAVAX_PERSISTENCE_JDBC_URL = "javax.persistence.jdbc.url";
 
-	private static final String ECLIPSELINK_COMPOSITE_UNIT_PROPERTIES = "eclipselink.composite-unit.properties";
+	public static final String ECLIPSELINK_COMPOSITE_UNIT_PROPERTIES = "eclipselink.composite-unit.properties";
 
 	@Bean
 	public static PropertySourcesPlaceholderConfigurer propertyPlaceholderConfigurer() {
+		
+		LOG.info("-> propertyPlaceholderConfigurer");
+		
 		return new PropertySourcesPlaceholderConfigurer();
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Bean
 	protected EntityManagerFactory entityManagerFactory() throws PersistenceException {
 		LOG.info("-> entityManagerFactory");

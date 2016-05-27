@@ -5,6 +5,7 @@
 	<persistence-unit name="PUONE" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>com.test.poc.compositepu.entity.TableOne</class>
+        <class>com.test.poc.compositepu.entity.DBVersion</class>
 		<properties>
 			<property name="javax.persistence.validation.group.pre-persist" value="" />
 			<property name="javax.persistence.validation.group.pre-update" value="none" />

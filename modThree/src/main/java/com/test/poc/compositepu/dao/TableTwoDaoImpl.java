@@ -17,6 +17,7 @@ public class TableTwoDaoImpl implements TableTwoDao {
 	@PersistenceContext
 	private EntityManager em;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<TableTwo> getTableTwoList(Integer start, Integer range) {
 		LOG.info("-> getTableTwoList start={}, range={}", start, range);

@@ -12,6 +12,11 @@ import javax.persistence.Table;
 @Table(name = "TableTwo")
 public class TableTwo implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Id")
